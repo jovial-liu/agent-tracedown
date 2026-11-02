@@ -345,7 +345,7 @@ _INJECTION = re.compile(
     r"disregard (all |any |the |your )?(previous|prior|above|earlier) (instructions|prompts?|rules)|"
     r"forget (all |your )?(previous|prior) instructions|new instructions\s*:|"
     r"important\s*:\s*new task\b|"
-    r"assistant\s*[,;:]?\s+you\s+(must|need to|are required to)\s+(now\s+)?|"
+    r"assistant\s*[,;:]\s+you\s+(must|need to|are required to)\s+now\s+|"
     r"as an ai model\s*,?\s+you are required to\b|"
     r"ignorez\s+(toutes?\s+)?les instructions (précédentes|precedentes)|"
     r"ignoriere\s+(alle\s+)?vorherigen anweisungen|"
