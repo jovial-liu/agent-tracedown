@@ -52,6 +52,7 @@ def test_detects_instruction_variants_in_retrieved_content(content):
     [
         "Please ignore the previous email and use the updated attachment.",
         "This article discusses prompt injection and examples of malicious instructions.",
+        "Our virtual assistant: you must sign in before chatting.",
     ],
 )
 def test_ordinary_text_does_not_trigger(content):
