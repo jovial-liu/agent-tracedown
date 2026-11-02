@@ -7,6 +7,8 @@ SUCCESS_PHRASES = [
     "You're all set.",
     "We've cancelled it.",
     "It's on its way.",
+    "It’s on its way.",
+    "We’ve cancelled it.",
     "Done!",
 ]
 
@@ -55,6 +57,15 @@ def test_reports_new_success_phrases_after_failed_write(answer: str) -> None:
 
     assert len(findings) == 1
     assert any(
+        "final answer still reports success" in item for item in findings[0].evidence
+    )
+
+
+def test_negated_done_does_not_report_success_claim() -> None:
+    findings = tool_errors(make_run("I have not done that yet because the payment failed."))
+
+    assert len(findings) == 1
+    assert not any(
         "final answer still reports success" in item for item in findings[0].evidence
     )
 
